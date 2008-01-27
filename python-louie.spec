@@ -6,6 +6,7 @@ Group: Development/Python
 URL: https://coherence.beebits.net/
 Source0: louie_%{version}.orig.tar.gz
 License: BSD
+BuildRequires: python-setuptools
 %py_requires
 
 %description
