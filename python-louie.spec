@@ -15,8 +15,7 @@ Louie provides Python programmers with a straightforward way to dispatch signals
 
 %files
 %defattr(-,root,root)
-%py_platsitedir/louie
-%exclude %py_platsitedir/Louie-1.1-py2.5.egg-info
+%py_platsitedir/*
 
 #------------------------------------------------------------
 
@@ -24,12 +23,12 @@ Louie provides Python programmers with a straightforward way to dispatch signals
 %setup -q -n Louie-%version
 
 %build
-python setup.py build
+python setup.py build 
 
 %install
 rm -rf %buildroot
 
-python setup.py install --root=%buildroot
+python setup.py install --root=%buildroot --install-lib=%py_platsitedir
 
 %clean
 rm -rf %buildroot
