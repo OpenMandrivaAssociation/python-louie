@@ -11,7 +11,10 @@ BuildRequires: python-setuptools
 %py_requires -d
 
 %description
-Louie provides Python programmers with a straightforward way to dispatch signals between objects in a wide variety of contexts. It is based on PyDispatcher, which in turn was based on a highly-rated recipe in the Python Cookbook.
+Louie provides Python programmers with a straightforward way to dispatch
+signals between objects in a wide variety of contexts. It is based on
+PyDispatcher, which in turn was based on a highly-rated recipe in the Python
+Cookbook.
 
 %files
 %defattr(-,root,root)
