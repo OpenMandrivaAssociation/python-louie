@@ -3,6 +3,7 @@ Summary: Louie provides dispatch signals between objects in a wide variety of co
 Version: 1.1
 Release: %mkrel 1
 Group: Development/Python 
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: https://coherence.beebits.net/
 Source0: louie_%{version}.orig.tar.gz
 License: BSD
