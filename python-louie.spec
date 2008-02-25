@@ -1,10 +1,10 @@
 Name: python-louie
 Summary: Louie provides dispatch signals between objects in a wide variety of contexts
 Version: 1.1
-Release: %mkrel 1
+Release: %mkrel 2
 Group: Development/Python 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL: https://coherence.beebits.net/
+URL: http://pylouie.org/
 Source0: louie_%{version}.orig.tar.gz
 License: BSD
 Provides: Louie
