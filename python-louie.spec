@@ -40,4 +40,3 @@ Cookbook.
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
 %doc doc/*.txt
-%py_platsitedir/*
