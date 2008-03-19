@@ -1,14 +1,20 @@
-Name: python-louie
-Summary: Louie provides dispatch signals between objects in a wide variety of contexts
-Version: 1.1
-Release: %mkrel 2
-Group: Development/Python 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL: http://pylouie.org/
-Source0: louie_%{version}.orig.tar.gz
-License: BSD
-Provides: Louie
+%define module  louie
+%define name   	python-%{module}
+%define version	1.1
+%define release %mkrel 3
+
+Name: 	       %{name}
+Summary:       Louie provides dispatch signals between objects in a wide variety of contexts
+Version:       %{version}
+Release:       %{release}
+Group: 	       Development/Python 
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+URL: 	       http://pylouie.org/
+Source0:       louie_%{version}.orig.tar.gz
+License:       BSD
+Provides:      Louie
 BuildRequires: python-setuptools
+BuildArch:     noarch
 %py_requires -d
 
 %description
@@ -17,23 +23,21 @@ signals between objects in a wide variety of contexts. It is based on
 PyDispatcher, which in turn was based on a highly-rated recipe in the Python
 Cookbook.
 
-%files
-%defattr(-,root,root)
-%py_platsitedir/*
-
-#------------------------------------------------------------
-
 %prep
 %setup -q -n Louie-%version
 
 %build
-python setup.py build 
+%__python setup.py build 
 
 %install
-rm -rf %buildroot
+%__rm -rf %{buildroot}
 
-python setup.py install --root=%buildroot --install-lib=%py_platsitedir
+%__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 
 %clean
-rm -rf %buildroot
+%__rm -rf %{buildroot}
 
+%files -f INSTALLED_FILES
+%defattr(-,root,root)
+%doc doc/*.txt
+%py_platsitedir/*
