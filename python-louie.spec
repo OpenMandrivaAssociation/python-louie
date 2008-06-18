@@ -1,7 +1,7 @@
 %define module  louie
 %define name   	python-%{module}
 %define version	1.1
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name: 	       %{name}
 Summary:       Louie provides dispatch signals between objects in a wide variety of contexts
