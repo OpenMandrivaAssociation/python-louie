@@ -1,7 +1,7 @@
 %define module  louie
 %define name   	python-%{module}
 %define version	1.1
-%define release %mkrel 6
+%define release %mkrel 7
 
 Name: 	       %{name}
 Summary:       Louie provides dispatch signals between objects in a wide variety of contexts
@@ -32,11 +32,13 @@ Cookbook.
 %install
 %__rm -rf %{buildroot}
 
-%__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+%__python setup.py install --root=%{buildroot}
 
 %clean
 %__rm -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
 %doc doc/*.txt
+%py_puresitedir/louie
+%py_puresitedir/Louie*.egg-info
