@@ -10,8 +10,8 @@ Url:		http://pylouie.org/
 Source0:	louie_%{version}.orig.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
+BuildRequires:  python-devel
 Provides:	Louie
-%py_requires -d
 
 %description
 Louie provides Python programmers with a straightforward way to dispatch
