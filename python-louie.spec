@@ -10,7 +10,7 @@ Url:		http://pylouie.org/
 Source0:	louie_%{version}.orig.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
-BuildRequires:  python-devel
+BuildRequires:  pkgconfig(python2)
 Provides:	Louie
 
 %description
@@ -23,13 +23,13 @@ Cookbook.
 %setup -qn Louie-%{version}
 
 %build
-%__python setup.py build 
+%{__python2} setup.py build 
 
 %install
-%__python setup.py install --root=%{buildroot}
+%{__python2} setup.py install --root=%{buildroot}
 
 %files
 %doc doc/*.txt
-%{py_puresitedir}/louie
-%{py_puresitedir}/Louie*.egg-info
+%{py2_puresitedir}/louie
+%{py2_puresitedir}/Louie*.egg-info
 
