@@ -6,7 +6,7 @@ Version:	2.0
 Release:	3
 Group:		Development/Python 
 License:	BSD
-Url:		http://pylouie.org/
+Url:		https://pylouie.org/
 Source0:	https://files.pythonhosted.org/packages/f2/f8/f9dfd97003f1c120dca1ed4dc9e3e16b74b583ce5bcb2d9b013142b6bee2/Louie-2.0.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
