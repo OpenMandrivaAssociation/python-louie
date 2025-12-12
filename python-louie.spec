@@ -3,7 +3,7 @@
 Summary:	Louie provides dispatch signals between objects in a wide variety of contexts
 Name:		python-%{module}
 Version:	2.0
-Release:	3
+Release:	4
 Group:		Development/Python 
 License:	BSD
 Url:		https://pylouie.org/
