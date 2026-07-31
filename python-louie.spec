@@ -2,12 +2,12 @@
 
 Summary:	Louie provides dispatch signals between objects in a wide variety of contexts
 Name:		python-%{module}
-Version:	2.0
-Release:	5
+Version:	2.0.1
+Release:	1
 Group:		Development/Python 
 License:	BSD
 Url:		https://pylouie.org/
-Source0:	https://files.pythonhosted.org/packages/f2/f8/f9dfd97003f1c120dca1ed4dc9e3e16b74b583ce5bcb2d9b013142b6bee2/Louie-2.0.tar.gz
+Source0:	https://files.pythonhosted.org/packages/f2/f8/f9dfd97003f1c120dca1ed4dc9e3e16b74b583ce5bcb2d9b013142b6bee2/Louie-2.0.1.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 BuildRequires:	python2-setuptools
@@ -21,7 +21,7 @@ PyDispatcher, which in turn was based on a highly-rated recipe in the Python
 Cookbook.
 
 %prep
-%setup -qn Louie-%{version}
+%setup -qn Louie-%{version} -n Louie-2.0.1
 
 %build
 %{__python} setup.py build 
